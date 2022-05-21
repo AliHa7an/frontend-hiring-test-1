@@ -63,7 +63,6 @@ export function PaginatedItems({
   const [itemOffset, setItemOffset] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedId, setId] = useState("");
-  console.log({ isGroupBy, items });
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     if (!isGroupBy) {

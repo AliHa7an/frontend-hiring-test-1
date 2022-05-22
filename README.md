@@ -2,7 +2,7 @@
 
 This test is a part of our hiring process at TuringTech for the Frontend Engineer position. It should take you between 3 to 5 hours, depending on your experience, to implement the minimal version. But we thought about a few bonuses, so feel free to spend some time on them if you want.
 
-*Feel free to apply! Drop us a line with your LinkedIn/GitHub/Twitter at hr@turingtechnologies.org.*
+_Feel free to apply! Drop us a line with your LinkedIn/GitHub/Twitter at hr@turingtechnologies.org._
 
 ## Context
 
@@ -17,6 +17,7 @@ For the purpose of this test please use Bootstrap for the base design library. C
 _NB: You can also build your own components from scratch instead of using bootstrap._
 
 This application must:
+
 - Display a paginated list of calls that you’ll retrieve from the API.
 - Display the call details view if the user clicks on a call. the view should display all the data related to the call itself.
 - Be able to archive one or several calls
@@ -24,13 +25,12 @@ This application must:
 - Handle real-time events (Whenever a call is archived or a note is being added to a call, these changes should be reflected on the UI immediately)
 
 Bonus:
+
 - Use Typescript
 - Provide filtering feature, to filter calls by type (archived, missed …)
-… and many others! Don’t be afraid to use new or unknown libraries, we’d love to learn new things!  
-
+  … and many others! Don’t be afraid to use new or unknown libraries, we’d love to learn new things!
 
 **Important Note**: We want you to build this small app as you'd have done it for your current job. (UI, UX, tests, documentation matters).
-
 
 ## APIs
 
@@ -202,6 +202,7 @@ All the endpoints are protected by a middleware that checks if the user is authe
 ```
 
 Response:
+
 ```
 {
   nodes: [Call!]
@@ -223,6 +224,7 @@ Response:
 ```
 
 Response
+
 ```
 {
   id: String!
@@ -291,7 +293,8 @@ This event will be called each time you add a note or archive a call.
 
 Note that, you need to use Pusher SDK in order to listen for this event.
 
-Because this channel is private you need to authenticate first, to do that, you need to make 
+Because this channel is private you need to authenticate first, to do that, you need to make
+
 - `APP_AUTH_ENDPOINT` point to: `https://frontend-test-api.aircall.io/pusher/auth`
 - set `APP_KEY` to `d44e3d910d38a928e0be`
 - and set `APP_CLUSTER` to `eu`
@@ -303,6 +306,7 @@ The REST API can return a different type of errors:
 `400` `BAD_REQUEST` error, happens when you provide some data which doesn't respect a given shape.
 
 Example
+
 ```
 {
   "statusCode": 400,
@@ -317,6 +321,7 @@ Example
 `401` `UNAUTHORIZED` error, happens when the user is not authorized to perform an action or if his token is no longer valid
 
 Example
+
 ```
 {
   "statusCode": 401,
@@ -327,6 +332,7 @@ Example
 `404` `NOT_FOUND` error, happens when the user requests a resource that no longer exists.
 
 Example
+
 ```
 {
   "statusCode": 404,
@@ -341,6 +347,54 @@ Example
 - Deploy your app on Heroku or Netlify
 
 ## Code Submit
-Please organize, design, test and document your code as if it were going into production and send us a pull request. We will review it and get back to you in order to talk about your code! 
+
+Please organize, design, test and document your code as if it were going into production and send us a pull request. We will review it and get back to you in order to talk about your code!
 
 All the best and happy coding.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
